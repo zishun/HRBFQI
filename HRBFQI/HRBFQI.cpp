@@ -1,7 +1,12 @@
 // HRBFQI.cpp : Defines the entry point for the console application.
 //
 
+#ifdef WIN32
 #include "stdafx.h"
+#else
+#include <cstring>
+#include "string.h"
+#endif
 #include <iostream>
 #include <string>
 #include <time.h>
@@ -53,7 +58,7 @@ int main(int argc, char* argv[])
 	cout<<"********************************************************************"<<endl;
 	cout<<"Read points file..."<<argv[1]<<endl;
 	char input_filename[256];
-	strcpy(input_filename,"Data\\");
+    strcpy(input_filename,"Data/");
 	strcat(input_filename,argv[1]);
 //	int length=strlen(filename);
 	FILE* file;
@@ -225,7 +230,7 @@ int main(int argc, char* argv[])
 	if(mesh == NULL || mesh->face_N == 0)
 		return 1;
 	char output_filename[256];
-	strcpy(output_filename,"Data\\");
+    strcpy(output_filename,"Data/");
 	strcat(output_filename,argv[2]);
 
 	file = fopen(output_filename,"w");

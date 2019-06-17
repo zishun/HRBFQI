@@ -2,7 +2,9 @@
 //
 //////////////////////////////////////////////////////////////////////
 
+#ifdef WIN32
 #include "stdafx.h"
+#endif
 #include "FileManager.h"
 
 #include "../DataStructure/PolygonalMesh.h"

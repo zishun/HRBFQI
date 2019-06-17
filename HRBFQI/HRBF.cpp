@@ -1,4 +1,8 @@
+#ifdef WIN32
 #include "stdafx.h"
+#else
+#include <cstring>
+#endif
 #include "HRBF.h"
 #include "math.h"
 #include "../numericalC/PBCG.h"
@@ -6,6 +10,10 @@
 #include <float.h>
 #include <iostream>
 #include "omp.h"
+
+#ifndef WIN32
+bool _isnan(double f){return isnan(f);}
+#endif
 
 using namespace std;
 
@@ -198,14 +206,6 @@ inline void HRBF::weightDH(float *w, float g[], float h[], double d2, float vx, 
 }
 
 
-inline double HRBF::weight(double d2)
-{
-	if(T2 < d2)
-		return 0;
-	
-	double r = sqrt(d2/T2);
-	return pow(1.0 - r, 4)*(4.0*r + 1.0);
-}
 float HRBF::value(float x, float y, float z)
 {
 	double f = 0;

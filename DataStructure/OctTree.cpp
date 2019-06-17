@@ -2,6 +2,7 @@
 //
 //////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
+#ifdef WIN32
 #include <afxwin.h>         //  
 #include <afxext.h>         // 
 #include <afxdisp.h>        // 
@@ -11,6 +12,10 @@
 #endif // _AFX_NO_AFXCMN_SUPPORT
 
 #include "windows.h"
+#else
+#include "stdio.h"
+#include <algorithm>    // std::max
+#endif
 #include "OctTree.h"
 
 #ifdef _DEBUG
@@ -115,7 +120,7 @@ void OctTree::setPointSet(PointSet *ps)
 	
 	float xmin, xmax, ymin, ymax, zmin, zmax;
 	ps->getBound(xmin, xmax, ymin, ymax, zmin, zmax);
-	float size = max(xmax-xmin, max(ymax-ymin, zmax-zmin));
+    float size = std::max(xmax-xmin, std::max(ymax-ymin, zmax-zmin));
 
 	/*
 	sizeX = size; //(xmax-xmin);

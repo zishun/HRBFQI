@@ -1,6 +1,7 @@
 // PolygonalMesh.cpp: PolygonalMesh 
 //
 //////////////////////////////////////////////////////////////////////
+#ifdef WIN32
 #include <afxwin.h>         
 #include <afxext.h>         
 #include <afxdisp.h>        
@@ -8,9 +9,10 @@
 #ifndef _AFX_NO_AFXCMN_SUPPORT
 #include <afxcmn.h>			
 #endif // _AFX_NO_AFXCMN_SUPPORT
+#endif
 
 #include "PolygonalMesh.h"
-#include "..\PQP\include\PQP.h"
+#include "../PQP/include/PQP.h"
 
 #ifdef _DEBUG
 #undef THIS_FILE

@@ -1,4 +1,8 @@
+#ifdef WIN32
 #include "StdAfx.h"
+#else
+#include <cstring>
+#endif
 #include "MeshCleaner.h"
 
 CMeshCleaner::CMeshCleaner(void)

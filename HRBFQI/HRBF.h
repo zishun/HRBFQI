@@ -51,7 +51,13 @@ public:
 	inline void weightDH(float g[], float h[], double d2, float vx, float vy, float vz);
 	inline void weightDH(float *w, float g[], float h[], double d2, float vx, float vy, float vz);
 
-	inline double weight(double d2);
+    inline double weight(double d2){
+        if(T2 < d2)
+            return 0;
+
+        double r = sqrt(d2/T2);
+        return pow(1.0 - r, 4)*(4.0*r + 1.0);
+    }
 
 	//Visualizations
 	PolygonalMesh* generateCrossSection(float o[3], float t1[3], float t2[3], int n, int m);

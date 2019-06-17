@@ -13,6 +13,10 @@
 #include "../DataStructure/PointSet.h"
 #include "stdio.h"
 
+#ifndef WIN32
+typedef std::string CString;
+#endif
+
 class FileManager  
 {
 protected:

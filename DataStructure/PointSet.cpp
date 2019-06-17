@@ -1,13 +1,18 @@
-// PointSet.cpp: PointSet ƒNƒ‰ƒX‚ÌƒCƒ“ƒvƒŠƒƒ“ƒe[ƒVƒ‡ƒ“
+// PointSet.cpp: PointSet ï¿½Nï¿½ï¿½ï¿½Xï¿½ÌƒCï¿½ï¿½ï¿½vï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½eï¿½[ï¿½Vï¿½ï¿½ï¿½ï¿½
 //
 //////////////////////////////////////////////////////////////////////
-#include <afxwin.h>         // MFC ‚ÌƒRƒA‚¨‚æ‚Ñ•W€ƒRƒ“ƒ|[ƒlƒ“ƒg
-#include <afxext.h>         // MFC ‚ÌŠg’£•”•ª
-#include <afxdisp.h>        // MFC ‚ÌƒI[ƒgƒ[ƒVƒ‡ƒ“ ƒNƒ‰ƒX
-#include <afxdtctl.h>		// MFC ‚Ì Internet Explorer 4 ƒRƒ‚ƒ“ ƒRƒ“ƒgƒ[ƒ‹ ƒTƒ|[ƒg
+#ifdef WIN32
+#include <afxwin.h>         // MFC ï¿½ÌƒRï¿½Aï¿½ï¿½ï¿½ï¿½Ñ•Wï¿½ï¿½ï¿½Rï¿½ï¿½ï¿½|ï¿½[ï¿½lï¿½ï¿½ï¿½g
+#include <afxext.h>         // MFC ï¿½ÌŠgï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+#include <afxdisp.h>        // MFC ï¿½ÌƒIï¿½[ï¿½gï¿½ï¿½ï¿½[ï¿½Vï¿½ï¿½ï¿½ï¿½ ï¿½Nï¿½ï¿½ï¿½X
+#include <afxdtctl.h>		// MFC ï¿½ï¿½ Internet Explorer 4 ï¿½Rï¿½ï¿½ï¿½ï¿½ ï¿½Rï¿½ï¿½ï¿½gï¿½ï¿½ï¿½[ï¿½ï¿½ ï¿½Tï¿½|ï¿½[ï¿½g
 #ifndef _AFX_NO_AFXCMN_SUPPORT
-#include <afxcmn.h>			// MFC ‚Ì Windows ƒRƒ‚ƒ“ ƒRƒ“ƒgƒ[ƒ‹ ƒTƒ|[ƒg
+#include <afxcmn.h>			// MFC ï¿½ï¿½ Windows ï¿½Rï¿½ï¿½ï¿½ï¿½ ï¿½Rï¿½ï¿½ï¿½gï¿½ï¿½ï¿½[ï¿½ï¿½ ï¿½Tï¿½|ï¿½[ï¿½g
 #endif // _AFX_NO_AFXCMN_SUPPORT
+#else
+#include "stdio.h"
+#include "stdlib.h"
+#endif
 
 #include "PointSet.h"
 #include "math.h"
@@ -20,7 +25,7 @@ static char THIS_FILE[]=__FILE__;
 #endif
 
 //////////////////////////////////////////////////////////////////////
-// \’z/Á–Å
+// ï¿½\ï¿½z/ï¿½ï¿½ï¿½ï¿½
 //////////////////////////////////////////////////////////////////////
 
 PointSet::PointSet()
