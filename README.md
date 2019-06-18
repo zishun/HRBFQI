@@ -4,9 +4,8 @@ Note: Please note this is a fork of the [official repository](https://github.com
 
 This is a fast surface reconstruction method from Hermite points, presented in the paper
 
-```
-Shengjun Liu, Charlie C.L. Wang, Guido Brunnett, and Jun Wang, "A closed-form formulation of HRBF-based surface reconstruction by approximate solution", Computer-Aided Design, Special Issue of 2016 Symposium on Solid and Physical Modeling, June 20-24, 2016, Berlin, Germany, vol.78, pp.147-157, September 2016.
-```
+> Shengjun Liu, Charlie C.L. Wang, Guido Brunnett, and Jun Wang, "A closed-form formulation of HRBF-based surface reconstruction by approximate solution", Computer-Aided Design, Special Issue of 2016 Symposium on Solid and Physical Modeling, June 20-24, 2016, Berlin, Germany, vol.78, pp.147-157, September 2016.
+
 
 ## Build
 
