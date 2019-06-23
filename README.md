@@ -11,19 +11,19 @@ This is a fast surface reconstruction method from Hermite points, presented in t
 
 ## Build
 
-* Windows+MSVS: use ```RBFRecon.sln```.
-* Linux+Qt-Creator: use ```RBFRecon.pro```.
-* Linux+CMake: 
+* Windows + MSVS: use ```RBFRecon.sln```.
+* Linux + Qt Creator: use ```RBFRecon.pro```.
+* Linux + CMake: 
     ```
     mkdir build && cd build
     cmake .. && make -j9
     ```
-* Linux+Python Binding
+* Linux + Python Binding: requires pybind11
     ```
     cd pyHRBFQI
     mkdir build && cd build
     cmake .. && make -j9
-    python test_pyHRBFQI.py	
+    python test_pyHRBFQI.py
     ```
 
 ## Usage
