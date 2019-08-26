@@ -11,7 +11,7 @@ This is a fast surface reconstruction method from Hermite points, presented in t
 
 ## Build
 
-#### C++ Executable
+### C++ Executable
 
 * Windows + MSVS: use ```RBFRecon.sln```. ![](https://img.shields.io/badge/build-passing-brightgreen)
 * Linux + Qt Creator: use ```RBFRecon.pro```. ![](https://img.shields.io/badge/build-passing-brightgreen)
